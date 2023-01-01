@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import '../colors.dart';
 import '../info.dart';
-import '/screens/mobile_chat_screen.dart';
+import '../screens/mobile_chat_screen.dart';
 
 class ContactsList extends StatelessWidget {
   const ContactsList({Key? key}) : super(key: key);
