@@ -66,7 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '194732532548',
     projectId: 'whatsapp-backend-84c61',
     storageBucket: 'whatsapp-backend-84c61.appspot.com',
-    iosClientId: '194732532548-71uue66aqqa9oricnea0krrs1jtilgt8.apps.googleusercontent.com',
+    iosClientId:
+        '194732532548-71uue66aqqa9oricnea0krrs1jtilgt8.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterWhatsappClone',
   );
 
@@ -76,7 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '194732532548',
     projectId: 'whatsapp-backend-84c61',
     storageBucket: 'whatsapp-backend-84c61.appspot.com',
-    iosClientId: '194732532548-71uue66aqqa9oricnea0krrs1jtilgt8.apps.googleusercontent.com',
+    iosClientId:
+        '194732532548-71uue66aqqa9oricnea0krrs1jtilgt8.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterWhatsappClone',
   );
 }
