@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_whatsapp_clone/common/widgets/error.dart';
 import 'package:flutter_whatsapp_clone/features/auth/screens/otp_screen.dart';
 import 'package:flutter_whatsapp_clone/features/auth/screens/user_information_screen.dart';
+import 'package:flutter_whatsapp_clone/screens/mobile_chat_screen.dart';
 
 import 'features/auth/screens/login_screen.dart';
+import 'features/select_contacts/screens/select_contacts_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -22,6 +24,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const UserInformationScreen(),
       );
+    case SelectContactsScreen.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const SelectContactsScreen(),
+      );
+    case MobileChatScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const MobileChatScreen());
     default:
       return MaterialPageRoute(
         builder: (context) => const Scaffold(
