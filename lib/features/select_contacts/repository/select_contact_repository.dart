@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_whatsapp_clone/common/utils/utils.dart';
-import 'package:flutter_whatsapp_clone/screens/mobile_chat_screen.dart';
+import 'package:flutter_whatsapp_clone/features/chat/screens/mobile_chat_screen.dart';
 
 import '../../../models/user_model.dart';
 
