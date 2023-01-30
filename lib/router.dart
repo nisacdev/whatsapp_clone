@@ -9,6 +9,7 @@ import 'package:flutter_whatsapp_clone/features/status/screens/confirm_status_sc
 import 'package:flutter_whatsapp_clone/features/status/screens/status_screen.dart';
 
 import 'features/auth/screens/login_screen.dart';
+import 'features/group/screens/create_group_screen.dart';
 import 'features/select_contacts/screens/select_contacts_screen.dart';
 import 'models/status_model.dart';
 
@@ -55,6 +56,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           builder: (context) => StatusScreen(
                 status: status,
               ));
+    case CreateGroupScreen.routeName:
+      return MaterialPageRoute(builder: (context) => const CreateGroupScreen());
     default:
       return MaterialPageRoute(
         builder: (context) => const Scaffold(
