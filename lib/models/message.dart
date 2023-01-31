@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import '../common/enums/message_enum.dart';
 
 class Message {

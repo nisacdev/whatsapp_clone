@@ -7,8 +7,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../common/repositories/common_firebase_storage_repository.dart';
 import '../../../common/utils/utils.dart';
+import '../../../mobile_layout_screen.dart';
 import '../../../models/user_model.dart';
-import '../../../screens/mobile_layout_screen.dart';
 import '../screens/otp_screen.dart';
 import '../screens/user_information_screen.dart';
 

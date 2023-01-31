@@ -2,15 +2,15 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_whatsapp_clone/features/auth/controller/auth_controller.dart';
-import 'package:flutter_whatsapp_clone/features/select_contacts/screens/select_contacts_screen.dart';
-import 'package:flutter_whatsapp_clone/features/status/screens/status_contacts_screen.dart';
 
-import '../colors.dart';
-import '../common/utils/utils.dart';
-import '../features/chat/widgets/contacts_list.dart';
-import '../features/group/screens/create_group_screen.dart';
-import '../features/status/screens/confirm_status_screen.dart';
+import 'colors.dart';
+import 'common/utils/utils.dart';
+import 'features/auth/controller/auth_controller.dart';
+import 'features/chat/widgets/contacts_list.dart';
+import 'features/group/screens/create_group_screen.dart';
+import 'features/select_contacts/screens/select_contacts_screen.dart';
+import 'features/status/screens/confirm_status_screen.dart';
+import 'features/status/screens/status_contacts_screen.dart';
 
 class MobileLayoutScreen extends ConsumerStatefulWidget {
   const MobileLayoutScreen({Key? key}) : super(key: key);
@@ -73,18 +73,22 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
               onPressed: () {},
             ),
             PopupMenuButton(
-                icon: const Icon(
-                  Icons.more_vert,
-                  color: Colors.grey,
-                ),
-                itemBuilder: (context) => [
-                      PopupMenuItem(
-                          child: const Text(
-                            'Create Group',
-                          ),
-                          onTap: () => Future(() => Navigator.pushNamed(
-                              context, CreateGroupScreen.routeName))),
-                    ])
+              icon: const Icon(
+                Icons.more_vert,
+                color: Colors.grey,
+              ),
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: const Text(
+                    'Create Group',
+                  ),
+                  onTap: () => Future(
+                    () => Navigator.pushNamed(
+                        context, CreateGroupScreen.routeName),
+                  ),
+                )
+              ],
+            ),
           ],
           bottom: TabBar(
             controller: tabBarController,
@@ -92,7 +96,7 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
             indicatorWeight: 4,
             labelColor: tabColor,
             unselectedLabelColor: Colors.grey,
-            labelStyle: TextStyle(
+            labelStyle: const TextStyle(
               fontWeight: FontWeight.bold,
             ),
             tabs: const [
@@ -113,7 +117,7 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
           children: const [
             ContactsList(),
             StatusContactsScreen(),
-            Text('Calls'),
+            Text('Calls')
           ],
         ),
         floatingActionButton: FloatingActionButton(

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class Status {
   final String uid;
   final String username;
