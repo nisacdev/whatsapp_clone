@@ -15,9 +15,12 @@ import 'sender_message_card.dart';
 class ChatList extends ConsumerStatefulWidget {
   final String recieverUserId;
   final bool isGroupChat;
-  const ChatList(
-      {Key? key, required this.recieverUserId, required this.isGroupChat})
-      : super(key: key);
+  const ChatList({
+    Key? key,
+    required this.recieverUserId,
+    required this.isGroupChat,
+  }) : super(key: key);
+
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _ChatListState();
 }
@@ -36,9 +39,13 @@ class _ChatListState extends ConsumerState<ChatList> {
     bool isMe,
     MessageEnum messageEnum,
   ) {
-    ref
-        .read(messageReplyProvider.state)
-        .update((state) => MessageReply(message, isMe, messageEnum));
+    ref.read(messageReplyProvider.state).update(
+          (state) => MessageReply(
+            message,
+            isMe,
+            messageEnum,
+          ),
+        );
   }
 
   @override
@@ -60,12 +67,12 @@ class _ChatListState extends ConsumerState<ChatList> {
             messageController
                 .jumpTo(messageController.position.maxScrollExtent);
           });
+
           return ListView.builder(
             controller: messageController,
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
               final messageData = snapshot.data![index];
-
               var timeSent = DateFormat.Hm().format(messageData.timeSent);
 
               if (!messageData.isSeen &&
@@ -86,8 +93,11 @@ class _ChatListState extends ConsumerState<ChatList> {
                   repliedText: messageData.repliedMessage,
                   username: messageData.repliedTo,
                   repliedMessageType: messageData.repliedMessageType,
-                  onLeftSwipe: () =>
-                      onMessageSwipe(messageData.text, true, messageData.type),
+                  onLeftSwipe: () => onMessageSwipe(
+                    messageData.text,
+                    true,
+                    messageData.type,
+                  ),
                   isSeen: messageData.isSeen,
                 );
               }
@@ -97,8 +107,11 @@ class _ChatListState extends ConsumerState<ChatList> {
                 type: messageData.type,
                 username: messageData.repliedTo,
                 repliedMessageType: messageData.repliedMessageType,
-                onRightSwipe: () =>
-                    onMessageSwipe(messageData.text, false, messageData.type),
+                onRightSwipe: () => onMessageSwipe(
+                  messageData.text,
+                  false,
+                  messageData.type,
+                ),
                 repliedText: messageData.repliedMessage,
               );
             },

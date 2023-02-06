@@ -45,17 +45,22 @@ class SelectContactRepository {
         );
         if (selectedPhoneNum == userData.phoneNumber) {
           isFound = true;
-          Navigator.pushNamed(context, MobileChatScreen.routeName, arguments: {
-            'name': userData.name,
-            'uid': userData.uid,
-          });
+          Navigator.pushNamed(
+            context,
+            MobileChatScreen.routeName,
+            arguments: {
+              'name': userData.name,
+              'uid': userData.uid,
+            },
+          );
         }
       }
 
       if (!isFound) {
         showSnackBar(
-            context: context,
-            content: 'This number does not exist on this app');
+          context: context,
+          content: 'This number does not exist on this app.',
+        );
       }
     } catch (e) {
       showSnackBar(context: context, content: e.toString());
