@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'colors.dart';
+import 'common/utils/colors.dart';
 import 'common/utils/utils.dart';
 import 'features/auth/controller/auth_controller.dart';
 import 'features/chat/widgets/contacts_list.dart';

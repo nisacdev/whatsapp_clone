@@ -1,10 +1,9 @@
 import 'package:cached_video_player/cached_video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_whatsapp_clone/common/utils/utils.dart';
 
 class VideoPlayerItem extends StatefulWidget {
   final String videoUrl;
-  VideoPlayerItem({
+  const VideoPlayerItem({
     Key? key,
     required this.videoUrl,
   }) : super(key: key);

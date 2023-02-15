@@ -11,7 +11,7 @@ import 'package:flutter_whatsapp_clone/features/chat/widgets/message_reply_previ
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../../../colors.dart';
+import '../../../common/utils/colors.dart';
 import '../../../common/utils/utils.dart';
 
 class BottomChatField extends ConsumerStatefulWidget {
@@ -204,14 +204,14 @@ class _BottomChatFieldState extends ConsumerState<BottomChatField> {
                       children: [
                         IconButton(
                           onPressed: selectImage,
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.camera_alt,
                             color: Colors.grey,
                           ),
                         ),
                         IconButton(
                           onPressed: selectVideo,
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.attach_file,
                             color: Colors.grey,
                           ),

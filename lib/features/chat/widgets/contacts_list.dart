@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_whatsapp_clone/features/chat/controller/chat_controller.dart';
 import 'package:intl/intl.dart';
-import '../../../colors.dart';
+import '../../../common/utils/colors.dart';
 import '../../../common/widgets/loader.dart';
 import '../screens/mobile_chat_screen.dart';
 import '../../../models/chat_contact.dart';

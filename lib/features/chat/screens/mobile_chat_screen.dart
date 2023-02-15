@@ -4,7 +4,7 @@ import 'package:flutter_whatsapp_clone/common/widgets/loader.dart';
 import 'package:flutter_whatsapp_clone/features/auth/controller/auth_controller.dart';
 import 'package:flutter_whatsapp_clone/features/call/controller/call_controller.dart';
 
-import '../../../colors.dart';
+import '../../../common/utils/colors.dart';
 import '../../../models/user_model.dart';
 import '../../call/screens/call_pickup_screen.dart';
 import '../widgets/chat_list.dart';

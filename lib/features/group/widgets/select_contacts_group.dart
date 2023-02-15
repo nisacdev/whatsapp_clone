@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_contacts/contact.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_whatsapp_clone/common/widgets/loader.dart';
-import 'package:flutter_whatsapp_clone/features/chat/widgets/contacts_list.dart';
+
 import 'package:flutter_whatsapp_clone/features/select_contacts/controller/select_contact_controller.dart';
 
 import '../../../common/widgets/error.dart';
@@ -28,7 +28,7 @@ class _SelectContactsGroupState extends ConsumerState<SelectContactsGroup> {
     }
     setState(() {});
     ref
-        .read(selectedGroupContacts.state)
+        .read(selectedGroupContacts.notifier)
         .update((state) => [...state, contact]);
   }
 

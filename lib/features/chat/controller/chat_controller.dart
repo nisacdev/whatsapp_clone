@@ -57,7 +57,7 @@ class ChatController {
             isGroupChat: isGroupChat,
           ),
         );
-    ref.read(messageReplyProvider.state).update((state) => null);
+    ref.read(messageReplyProvider.notifier).update((state) => null);
   }
 
   void sendFileMessage(
@@ -78,7 +78,7 @@ class ChatController {
             messageEnum: messageEnum,
             messageReply: messageReply,
             isGroupChat: isGroupChat));
-    ref.read(messageReplyProvider.state).update((state) => null);
+    ref.read(messageReplyProvider.notifier).update((state) => null);
   }
 
   void sendGIF(BuildContext context, String gifUrl, String recieverUserId,
@@ -96,7 +96,7 @@ class ChatController {
               messageReply: messageReply,
               isGroupChat: isGroupChat),
         );
-    ref.read(messageReplyProvider.state).update((state) => null);
+    ref.read(messageReplyProvider.notifier).update((state) => null);
   }
 
   void setChatMessageSeen(

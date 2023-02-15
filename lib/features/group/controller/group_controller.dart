@@ -6,8 +6,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:flutter_whatsapp_clone/features/group/repository/group_repository.dart';
 
-import '../repository/group_repository.dart';
-
 final groupControllerProvider = Provider((ref) {
   final groupRepository = ref.read(groupRepositoryProvider);
   return GroupController(

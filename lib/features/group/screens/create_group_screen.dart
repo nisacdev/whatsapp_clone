@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_whatsapp_clone/common/utils/utils.dart';
 import 'package:flutter_whatsapp_clone/features/group/controller/group_controller.dart';
 
-import '../../../colors.dart';
+import '../../../common/utils/colors.dart';
 import '../widgets/select_contacts_group.dart';
 
 class CreateGroupScreen extends ConsumerStatefulWidget {
@@ -32,7 +32,7 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
           groupNameController.text.trim(),
           image!,
           ref.read(selectedGroupContacts));
-      ref.read(selectedGroupContacts.state).update((state) => []);
+      ref.read(selectedGroupContacts.notifier).update((state) => []);
       Navigator.pop(context);
     }
   }

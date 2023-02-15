@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_whatsapp_clone/features/chat/widgets/display_text_image_gif.dart';
 import 'package:swipe_to/swipe_to.dart';
 
-import '../../../colors.dart';
+import '../../../common/utils/colors.dart';
 import '../../../common/enums/message_enum.dart';
 
 class SenderMessageCard extends StatelessWidget {
@@ -27,7 +27,6 @@ class SenderMessageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isReplying = repliedText.isNotEmpty;
     return SwipeTo(
       onRightSwipe: onRightSwipe,
       child: Align(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_whatsapp_clone/features/chat/widgets/display_text_image_gif.dart';
 import 'package:swipe_to/swipe_to.dart';
 
-import '../../../colors.dart';
+import '../../../common/utils/colors.dart';
 import '../../../common/enums/message_enum.dart';
 
 class MyMessageCard extends StatelessWidget {
